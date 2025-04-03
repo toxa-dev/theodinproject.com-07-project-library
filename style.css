@@ -160,7 +160,7 @@ table {
   outline: 1px solid #999292;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .global-container {
     padding-left: calc(
       var(--space-around-main-container) * var(--small-screens-factor)
