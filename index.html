@@ -3,7 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="main.js" defer></script>
+    <title>Project: library</title>
   </head>
-  <body></body>
+  <body>
+    <article class="global-container">
+      <section class="library-top">
+        <header>
+          <h1>Library Gallery</h1>
+          <div class="buttons">
+            <dialog id="add-book-dialog">
+              <form method="dialog">
+                <h2>Add a Book</h2>
+                <!-- Form fields (e.g., title, author) -->
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Book Title"
+                  autocomplete="book title"
+                  required
+                />
+                <input
+                  type="text"
+                  name="author"
+                  placeholder="Author"
+                  autocomplete="book author"
+                  required
+                />
+                <input
+                  type="number"
+                  name="pages"
+                  placeholder="463"
+                  autocomplete="book's total pages"
+                />
+                <div>
+                  <button type="submit" id="add-book-save-button">Save</button>
+                  <button type="button" id="add-book-close-button">
+                    Close
+                  </button>
+                </div>
+              </form>
+            </dialog>
+            <button type="button" id="add-book">Add</button>
+            <button type="button" id="remove-book">Remove</button>
+            <button type="button" id="finish-book">Finish</button>
+          </div>
+        </header>
+      </section>
+      <section>
+        <main>
+          <table class="books">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Completed</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </main>
+      </section>
+    </article>
+  </body>
 </html>

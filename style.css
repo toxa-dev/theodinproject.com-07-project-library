@@ -1,0 +1,167 @@
+:root {
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --main-background: #fafafa;
+  --space-around-main-container: 1.5rem;
+  --small-screens-factor: 0.2;
+  --header-padding-factor: 0.65;
+  --cell-padding-factor: 0.45;
+}
+
+body {
+  font-family: var(--system-ui);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #242729;
+  min-width: 430px;
+}
+
+/* General styles */
+h1 {
+  font-size: clamp(1.4rem, 1vw + 1rem, 3rem);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #eaebed;
+  border-radius: 8px;
+}
+
+.center {
+  text-align: center;
+}
+
+.finished {
+  background-color: #4dcb4d;
+}
+/**/
+
+.global-container {
+  background-color: var(--main-background);
+  padding: var(--space-around-main-container);
+}
+
+.library-top {
+  margin-bottom: 1.2rem;
+}
+
+.library-top header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buttons button {
+  padding: 0.35rem 0.6rem;
+  flex-basis: 0;
+  flex-grow: 1;
+  border: 1px solid #eaebed;
+  border-radius: 4px;
+  background: #f4f5f6;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  background: #e5e5e6;
+}
+
+.books {
+  background-color: #fdfdfc;
+}
+
+.books tr {
+  border-bottom: 1px solid #eaebed;
+}
+
+.books th {
+  text-align: left;
+  padding-top: calc(
+    var(--space-around-main-container) * var(--cell-padding-factor)
+  );
+  padding-bottom: calc(
+    var(--space-around-main-container) * var(--cell-padding-factor)
+  );
+  padding-left: calc(
+    var(--space-around-main-container) * var(--header-padding-factor)
+  );
+  padding-right: calc(
+    var(--space-around-main-container) * var(--header-padding-factor)
+  );
+}
+
+.books td {
+  padding: calc(
+    var(--space-around-main-container) * var(--header-padding-factor)
+  );
+}
+
+.select-book-checkbox {
+  appearance: none;
+  margin: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 1px solid currentColor;
+  border-radius: 0.15rem;
+
+  display: grid;
+  place-content: center;
+}
+
+.select-book-checkbox::before {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem #000;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.select-book-checkbox:checked::before {
+  transform: scale(1);
+}
+
+/* dialong */
+#add-book-dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+#add-book-dialog form {
+  display: grid;
+  gap: 1rem;
+}
+
+#add-book-dialog input {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #eaebed;
+  border-radius: 4px;
+  background: #f4f5f6;
+}
+
+#add-book-dialog input:focus {
+  outline: 1px solid #999292;
+}
+
+@media screen and (max-width: 500px) {
+  .global-container {
+    padding-left: calc(
+      var(--space-around-main-container) * var(--small-screens-factor)
+    );
+    padding-right: calc(
+      var(--space-around-main-container) * var(--small-screens-factor)
+    );
+  }
+}
