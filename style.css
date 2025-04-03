@@ -5,8 +5,10 @@
   --main-background: #fafafa;
   --space-around-main-container: 1.5rem;
   --small-screens-factor: 0.2;
-  --header-padding-factor: 0.65;
-  --cell-padding-factor: 0.45;
+  --header-padding-vertical-factor: 0.65;
+  --header-padding-horizontal-factor: 0.65;
+  --cell-padding-vertical-factor: 0.45;
+  --cell-padding-horizontal-factor: 0.45;
 }
 
 body {
@@ -15,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #242729;
-  min-width: 500px;
+  min-width: 420px;
 }
 
 /* General styles */
@@ -88,23 +90,27 @@ table {
 .books th {
   text-align: left;
   padding-top: calc(
-    var(--space-around-main-container) * var(--cell-padding-factor)
+    var(--space-around-main-container) * var(--cell-padding-vertical-factor)
   );
   padding-bottom: calc(
-    var(--space-around-main-container) * var(--cell-padding-factor)
+    var(--space-around-main-container) * var(--cell-padding-vertical-factor)
   );
   padding-left: calc(
-    var(--space-around-main-container) * var(--header-padding-factor)
+    var(--space-around-main-container) * var(--header-padding-horizontal-factor)
   );
   padding-right: calc(
-    var(--space-around-main-container) * var(--header-padding-factor)
+    var(--space-around-main-container) * var(--header-padding-horizontal-factor)
   );
 }
 
 .books td {
   padding: calc(
-    var(--space-around-main-container) * var(--header-padding-factor)
-  );
+      var(--space-around-main-container) * var(--header-padding-vertical-factor)
+    )
+    calc(
+      var(--space-around-main-container) *
+        var(--header-padding-horizontal-factor)
+    );
 }
 
 .select-book-checkbox {
@@ -176,5 +182,10 @@ table {
 
   #add-book-dialog {
     top: 25%;
+  }
+
+  :root {
+    --header-padding-horizontal-factor: 0.3;
+    --cell-padding-horizontal-factor: 0.15;
   }
 }
