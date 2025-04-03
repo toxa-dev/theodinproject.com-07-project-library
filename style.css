@@ -141,6 +141,7 @@ table {
   padding: 1rem;
   max-width: 500px;
   width: 85%;
+  transition: all 0.5s ease;
 }
 
 #add-book-dialog form {
