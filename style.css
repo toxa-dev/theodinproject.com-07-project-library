@@ -167,4 +167,8 @@ table {
       var(--space-around-main-container) * var(--small-screens-factor)
     );
   }
+
+  body {
+    align-items: initial;
+  }
 }
