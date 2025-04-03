@@ -173,4 +173,8 @@ table {
   body {
     align-items: initial;
   }
+
+  #add-book-dialog {
+    top: 25%;
+  }
 }
