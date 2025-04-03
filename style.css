@@ -42,6 +42,7 @@ table {
 .global-container {
   background-color: var(--main-background);
   padding: var(--space-around-main-container);
+  position: relative;
 }
 
 .library-top {
