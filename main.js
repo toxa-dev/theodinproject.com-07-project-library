@@ -21,9 +21,9 @@ function addBookToLibrary(author, title, pages, completed = "No") {
   myLibrary.push(book);
 }
 
-addBookToLibrary("Denis Johnson", "Tree of Smoke", "123", "Yes");
+addBookToLibrary("Denis Johnson", "Tree of Smoke", "123", "No");
 addBookToLibrary("Ann Patchett", "Bel Canto", "526", "No");
-addBookToLibrary("Emily St. John Mandel", "Station Eleven", "764", "Yes");
+addBookToLibrary("Emily St. John Mandel", "Station Eleven", "764", "No");
 addBookToLibrary("Viet Thanh Nguyen", "The Sympathizer", "325", "No");
 addBookToLibrary("Hanya Yanagihara", "A Little Life", "11");
 
