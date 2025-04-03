@@ -54,7 +54,11 @@ const addBookDialog = document.querySelector("#add-book-dialog");
 const addBookShowButton = document.querySelector("#add-book");
 const addBookCloseButton = document.querySelector("#add-book-close-button");
 
-addBookShowButton.addEventListener("click", () => addBookDialog.showModal());
+addBookShowButton.addEventListener("click", () => {
+  addBookDialog.showModal();
+  addBookDialog.focus(); // Auto-scrolls to the dialog if it's focusable
+});
+
 addBookCloseButton.addEventListener("click", () => addBookDialog.close());
 
 addBookDialog.querySelector("form").addEventListener("submit", (e) => {
